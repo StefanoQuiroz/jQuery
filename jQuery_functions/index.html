@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Internet The World Wide Web">
+    <link rel="stylesheet" href="./normalize/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://raw.githubusercontent.com/wilq32/jqueryrotate/master/jQueryRotate.js"></script>
+    <script src="https://kit.fontawesome.com/26beac1ff1.js" crossorigin="anonymous"></script>
+    <title>The Internet</title>
+    <script>
+        $(document).ready(function(){
+            $("#dns").click(function(){
+            $("#right-header").fadeIn();
+            });
+
+            $("#house").click(function(){
+                $("#right-header").fadeOut();
+            });
+
+            $("#image img").hide();
+
+            $("#graphic").click(function(){
+                $("#image img").slideDown();
+            });
+
+            $("#right-header ul li").hide();
+            $("#image i").click(function(){
+                $("#right-header ul li").slideToggle();
+            })
+
+            $("#footer img").hide();
+            $("#here").click(function(){
+                $("#footer img").slideToggle();
+            })
+
+            $("#header h3").css("text-align", "center").css("padding", "20px");
+            $("#header h3").text("World Wide");
+            $("#header h3").prepend("THE ");
+            $("#header h3").append(" WIDE");
+            $("#header h3").before("UP - LEVEL");
+            $("#middle-content h4").html("Modified with .html() from jQuery")
+        })
+    </script>
+</head>
+<body>
+    <div id="container">
+        <!-- HEADER -->
+        <div id="header">
+            <img src="./images/www-images/images/globe.png" alt="Globe">
+            <h1>The Inter<span>net</span></h1>
+            <h3>The World Wide Web</h3>
+        </div>
+        <!-- MAIN -->
+        <div id="main">
+            <div id="aside">
+                <div id="aside-content">
+                    <h4>So, what's an <span class="internet">Internet?</span></h4>
+                    <p>An <span>Inter</span>connected <span>Net</span>work of computers all around the world!</p>
+                    <button id="button-1">WATCH A VIDEO</button>
+                    <button id="button-2">MORE RESOURCES</button>
+                </div>
+
+                <div id="aside-image">
+                    <h4>Reinvent your career in just 14 weeks</h4>
+                    <img src="./images/www-images/images/ad_background.png" alt="ad_background">
+                    <img id="ninja" src="./images/www-images/images/ninja.png" alt="">
+                    <button>Learn More</button>
+                </div>
+            </div>
+
+            <div id="content">
+                <div id="top-content">
+                    <div id="left-header">
+                        <i id="house" class="fas fa-home"></i>
+                        <p id="dns">DNS</p>                        
+                    </div>
+                    <div id="right-header">
+                        <div id="image">
+                            <i  class="fas fa-phone-alt"></i>
+                        </div>
+                        <ul>
+                            <li class="small">Mon - Fri 9 a.m. - 5 p.m. (EST)</li>
+                            <li id="big">855.967.3787</li>
+                            <li class="small">International +1.617.963.0555</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="middle-content">
+                    <h4>Clients and Servers</h4>
+                    <p>Computers connected to the <span>Web</span> are called <span class="bold">clients</span> and <span class="bold">servers</span>.</p>
+                    <ul>
+                        <li><span>Clients</span> are the tipycal Web user's Internet-connected devices (for example, your computer connected to your WI-fi, or your phone connected tou your mobile network) and <span>Web-accessing software</span> available on those devices (usually a web browser like Firebox or Chrome).</li>
+                        <li><span>Servers</span> are computers that store <span>webpages</span>, <span>sites</span>, or <span>apps</span>. When a client device wants to access a webpage, a copy of the webpage is downloaded from the server onto the client machine to be displayed in the user's web browser. <span id="graphic">Graphic</span></li>
+                    </ul>
+                    <div id="image">
+                        <img src="./images/www-images/images/client_server.jpg" alt="client_server">
+                    </div>
+                    <h3>So What Actually Happens?</h3>
+                    <ol>
+                        <li><p>The browser goes to the <span>DNS server</span> and finds the real address of the <span>server</span> that the website lives on.</p></li>
+                        <li><p>The browser sends and <span>HTTP request</span> message to the server asking it to send a copy of the website to the client.</p></li>
+                        <li><p>If the server approves the client's request, the server sends the client a <span>"200 OK" message</span>, which means "Permission granted! Here you go!", and then starts sending the website's files to the browser as a series of small chunks.</p></li>
+                        <li><p>The browser assembles the small chubks into a complete website and displays it to you!</p></li>
+                    </ol>
+                </div>
+
+                <div id="footer">
+                    <img src="./images/www-images/images/html.png" alt="html">
+                    <div id="footer-content">
+                        <h4>The Big 3 - HTML, CSS, Javascript</h4>
+                        <p>While hte server can process information in many different languages, the files that they serve to the client arealways going to be some combination of HTML, CSS, and JavaScript!</p>
+                        <p>Learn more about the Big 3 <span id="here">here</span>!</p>
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </div>
+    </div>    
+</body>
+</html>
