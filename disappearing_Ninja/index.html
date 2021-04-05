@@ -9,7 +9,20 @@
     <link rel="stylesheet" href="./normalize/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Disappearing Ninja</title>
+    <script>
+        $(document).ready(function(){
+            $(".img, img").click(function(){
+                var img = $(this);
+                img.hide();
+            })
+            $("#btn").click(function(){
+                $(".img, img").show();
+            })
+        });
+
+    </script>
 </head>
 <body>
     <div id="container">
