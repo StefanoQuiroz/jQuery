@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="raw Javscript with DOM vs jQuery">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Raw Javascript vs jQuery</title>
+    <!-- Using jQuery same as raw Javascript -->
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                var pTag = $("#pTag");
+                pTag.css("background-color", "green");
+                pTag.css("color", "white");
+            })
+        });
+    </script>
+</head>
+<body>
+    <p id="pTag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, esse. Incidunt alias dolorum aspernatur totam?</p>
+    <button id="btn">CLICK</button>
+    <!-- raw Javascript with DOM -->
+    <!-- <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", function(){
+            var ptag = document.getElementById("pTag");
+            ptag.style.backgroundColor = "green";
+            ptag.style.color = "white";
+        });
+    </script> -->
+    
+</body>
+</html>
