@@ -9,8 +9,29 @@
     <link rel="stylesheet" href="./normalize/normalize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Ninja to Cat Puzzle</title>
+    <script>
+        var result = "";
+        for(var i=0; i<=4; i++){
+            result += '<img src="./img/ninja'+i+'.png" data-alt-src="./img/cat'+i+'.png">'
+        }
+        // console.log(result);
+        $(document).ready(function(){
+            $("#container").append(result);
+            $("img").click(function(){
+                //console.log($(this).attr("data-alt-src"));
+                // $().attr("atribute", "value modified")
+                var src = $(this).attr("src");
+                var dataAltSrc = $(this).attr("data-alt-src");
+                $(this).attr("src", dataAltSrc);
+                $(this).attr("data-alt-src", src);
+            });
+        });
+    </script>
 </head>
+    
 <body>
+    <div id="container"></div>
+    <!-- <img src="./img/ninja0.png" data-alt-src="./img/cat0.png"> -->
     
 </body>
 </html>
