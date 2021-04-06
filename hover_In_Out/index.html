@@ -18,18 +18,23 @@
         for(var i=0; i<matrix.length; i++){
             result += '<div class="row">'
             for(var j=0; j<matrix[i].length; j++){
-                result += '<img class="col lg-1" src="./images/image0'+matrix[i][j]+'.png" data-alt-src="./images/alt-image0'+matrix[i][j]+'.png">'
+                result += '<img class="col lg-1" src="./images/image0'+matrix[i][j]+'.png" dataAlt="./images/alt-image0'+matrix[i][j]+'.png">'
             }
             result += '</div>'
         }
         //console.log(result);
         $(document).ready(function(){
             $("#container").append(result);
-            $("img").hover(function(){
-                $(this).attr("src", $(this).attr("data-alt-src"));
-            },function(){
-                // don´t run check the error the handleOut
-                $(this).attr("src", $(this).attr("src"));
+            $('img').hover(function(){
+                var src = $(this).attr("src");
+                var dataAlt = $(this).attr("dataAlt");
+                $(this).attr("src", dataAlt);
+                $(this).attr("dataAlt", src);
+            }, function(){
+                var src = $(this).attr("src");
+                var dataAlt = $(this).attr("dataAlt");
+                $(this).attr("src", dataAlt);
+                $(this).attr("dataAlt", src);
             });
         });
     </script>
