@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>using document.on()</title>
+    <script>
+        $(document).ready(function(){
+            // $(".alert").click(function(){
+            //     alert("I have a message!!!");
+            // });
+            $(".new_btn").click(function(){
+                $("#buttons").append('<button class="alert">Click me for a message!</button>');
+            });
+            //new buttons have the alert message
+            $(document).on('click', '.alert', function(){
+                alert("I have a message!!!");
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <h3>Static Content!</h3>
+    <div>
+        <button class="alert">Click me for a message!</button>
+        <button class="alert">Click me for a message!</button>
+        <button class="alert">Click me for a message!</button>
+        <button class="new_btn">Click me to add a new buton!</button>
+    </div>
+    <h3>Dynamically rendered content!</h3>
+    <div id="buttons"></div>    
+</body>
+</html>
