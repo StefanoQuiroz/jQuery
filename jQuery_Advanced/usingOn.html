@@ -16,6 +16,7 @@
                 $("#buttons").append('<button class="alert">Click me for a message!</button>');
             });
             //new buttons have the alert message
+            //.on() Listen clicks
             $(document).on('click', '.alert', function(){
                 alert("I have a message!!!");
             });
