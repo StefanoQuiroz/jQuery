@@ -25,6 +25,12 @@
         //console.log(result);
         $(document).ready(function(){
             $("#container").append(result);
+            $("img").hover(function(){
+                $(this).attr("src", $(this).attr("data-alt-src"));
+            }, function(){
+                $("img").show();
+
+            });
         });
     </script>
 </head>
