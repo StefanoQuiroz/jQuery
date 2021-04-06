@@ -27,9 +27,9 @@
             $("#container").append(result);
             $("img").hover(function(){
                 $(this).attr("src", $(this).attr("data-alt-src"));
-            }, function(){
-                $("img").show();
-
+            },function(){
+                // don´t run check the error the handleOut
+                $(this).attr("src");
             });
         });
     </script>
