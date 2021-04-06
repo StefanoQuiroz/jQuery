@@ -9,23 +9,26 @@
     <script>
         $(document).ready(function(){
             //comment this part
-            // $(".alert").click(function(){
-            //     alert("I have a message!!!");
-            // });
+            $(".alert").click(function(){
+                alert("I have a message!!!");
+            });
             $(".new_btn").click(function(){
                 $("#buttons").append('<button class="alert">Click me for a message!</button>');
                 //another way
                 $("div.a, div.b").append('<h3>Hello</h3>');
             });
             //another way
+            //add to the containers
             $("div.a, div.b").on('mouseover', 'h3', function(){
                 $(this).css("color", "white");
                 $(this).css("background-color", "green");
             })
             //new buttons have the alert message
             //.on() Listen clicks
-            $(document).on('click', '.alert', function(){
-                alert("I have a message!!!");
+            //$(document).on('click', 'alert', 'function(){}')
+            //another way add to the containers parallerl to $(document).on()
+            $("#buttons").on('click', '.alert', function(){
+                alert("I have a message from dynamic to static!!!");
             });
         });
     </script>
