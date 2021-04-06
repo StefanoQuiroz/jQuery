@@ -14,7 +14,14 @@
             // });
             $(".new_btn").click(function(){
                 $("#buttons").append('<button class="alert">Click me for a message!</button>');
+                //another way
+                $("div.a, div.b").append('<h3>Hello</h3>');
             });
+            //another way
+            $("div.a, div.b").on('mouseover', 'h3', function(){
+                $(this).css("color", "white");
+                $(this).css("background-color", "green");
+            })
             //new buttons have the alert message
             //.on() Listen clicks
             $(document).on('click', '.alert', function(){
@@ -33,6 +40,8 @@
         <button class="new_btn">Click me to add a new buton!</button>
     </div>
     <h3>Dynamically rendered content!</h3>
-    <div id="buttons"></div>    
+    <div id="buttons"></div> 
+    <div class="a"></div>
+    <div class="b"></div>   
 </body>
 </html>
