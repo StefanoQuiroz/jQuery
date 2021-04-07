@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Traversing example 2">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Traversing Example 2</title>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                // $(this).siblings().children().first().html("<h3>Stefano Quiroz</h3>")
+                $(this).siblings().children().children().text("Michael Choi was here");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button>Click me for crazy things!</button>
+        <ul>
+            <li><h3>Tiger Woods</h3></li>
+            <li><h3>Phil Mickelson</h3></li>
+            <li><h3>Ben Hogan</h3></li>
+            <li><h3>Jack Nicklaus</h3></li>
+            <li><h3>Gary Player</h3></li>
+            <li><h3>Rory Mcilroy</h3></li>
+        </ul>
+    </div>
+</body>
+</html>
