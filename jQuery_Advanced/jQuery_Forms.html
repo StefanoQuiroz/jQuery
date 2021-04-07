@@ -12,6 +12,8 @@
             //.submit() works with or without type="submit"
             $("#form-1").submit(function(){
                 alert("You are submitting me");
+                //$(this).serialize() converts the data obtained in the form into a string
+                console.log($(this).serialize());
                 //not to send to process.php
                 return false;
             });
