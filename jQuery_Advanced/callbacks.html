@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>callbacks in dynamically rendered</title>
+    <script>
+        // callBack function
+        function attach_handlers(){
+            $(".alert").click(function(){
+                alert("Message from static button!!");
+            });
+        }
+        //Other call back function with alert dynamically button!
+        function dynamically(){
+            $(".alert").click(function(){
+                alert("Message from dynamically button!!");
+            });
+        }
+        $(document).ready(function(){
+            //call function
+            attach_handlers();
+            $(".new_btn").click(function(){
+                $("#buttons").append('<button class="alert">click me for a message!</button>');
+                //callBack function
+                //attach_handlers()
+                dynamically();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Static Content!</h3>
+    <div>
+        <button class="alert">click me for a message!</button>
+        <button class="alert">click me for a message!</button>
+        <button class="alert">click me for a message!</button>
+        <button class="new_btn">Click me to add a new button!</button>
+    </div>
+    <h3>Dynamically rendered content</h3>
+    <div id="buttons"></div>
+</body>
+</html>
