@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ninja_Disappearing with jQuery">
+    <link rel="stylesheet" href="styleGrid.css">
+    <link rel="stylesheet" href="./normalize/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Disappearing Ninja</title>
+    <!-- <script>
+        $(document).ready(function(){
+            $(".img, img").click(function(){
+                var img = $(this);
+                img.hide("slow");
+            })
+            $("#btn").click(function(){
+                $(".img, img").show();
+            })
+        });
+
+    </script> -->
+</head>
+<body>
+    <div id="container">
+        <div class="row">
+            <p class="sm-4 med-4 lg-4">JQuery - assignment 1</p>
+        </div>
+        <div class="row">
+            <img class="col sm-4 med-2 lg-1" src="./images/adventure-cat.png" alt="adventure-cat"><!--
+        --><img class="col sm-4 med-2 lg-1" src="./images/aidorucat.png" alt="aidorucat-cat"><!--
+        --><img class="col sm-4 med-2 lg-1" src="./images/catandninja.png" alt="catandninja-cat"><!--
+        --><img class="col sm-4 med-2 lg-1" src="./images/chellocat.jpg" alt="chello-cat"><!--
+        --><img class="col sm-4 med-2 lg-1" src="./images/cherry.jpg" alt="cherry-cat"><!--
+        --><img class="col sm-4 med-2 lg-1" src="./images/coder2.jpg" alt="coder2-cat"><!--
+        --><img class="col sm-4 med-2 lg-1" src="./images/codercat.jpg" alt="coder-cat"><!--
+        --><img class="col sm-4 med-2 lg-1" src="./images/cooler.png" alt="cooler-cat">
+        </div>
+        <div class="row">
+            <button class="col sm-4 med-2 lg-1" id="btn">Restore</button>
+        </div>
+    </div>
+</body>
+</html>

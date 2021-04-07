@@ -1,0 +1,63 @@
+*{
+    /* outline: 1px dotted red; */
+    box-sizing: border-box;
+    font-family: 'Dela Gothic One', cursive;
+
+}
+
+#container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row{
+    padding: 0.9%;
+}
+
+.col{
+    display: inline-block;
+    vertical-align: top;
+    border: 3px solid black;
+    text-align: left;
+    
+}
+
+#btn{
+    text-align: center;
+    background-color: green;
+    color: white;
+    border: 3px solid black;
+    box-shadow: 2px 2px 2px black;
+
+}
+
+@media only screen and (min-width: 1023px){
+    .lg-1{
+        width: 23.5%;
+        margin-right: 1.5%;
+        margin-bottom: 1%;
+        padding: 0.5%;
+    }
+    .lg-4{
+        width: 96%;
+        padding: 0.5%  2.5%;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 481px){
+    .med-2{
+        width: 48%;
+        margin: 0 2% 2% 0;    
+    }
+    .med-4{
+        width: 47%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .sm-4{
+        width: 100%;
+        display: blocks;
+        margin-bottom: 1.5%;
+    }
+}
