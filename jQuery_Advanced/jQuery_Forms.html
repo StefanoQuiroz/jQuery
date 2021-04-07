@@ -5,9 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Class jQuery for forms this is used in APIs and AJAX">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>jQuery_for_Forms</title>
+    <script>
+        $(document).ready(function(){
+            //.submit() works with or without type="submit"
+            $("#form-1").submit(function(){
+                alert("You are submitting me");
+                //not to send to process.php
+                return false;
+            });
+            //with other button tag invoke $("selector").submit() -> callback function
+            $("#buttons").click(function(){
+                $("#form-1").submit();
+            });
+        });
+    </script>
+
 </head>
 <body>
-    
+    <!-- id or tag element -->
+    <!-- action: where it is sent and method:how it is sent -->
+    <form id="form-1" action="process.php" method="POST">
+        <label for="name">First-Name</label>
+        <input type="text" id="name" name="name">
+        <label for="name">Last-Name</label>
+        <input type="text" id="last-name" name="last-name">
+        <label for="name">Email</label>
+        <input type="email" id="email" name="email">
+        <input type="submit" value="SUBMIT">
+    </form>
+    <button id="buttons">SUBMIT_2</button>
 </body>
 </html>
