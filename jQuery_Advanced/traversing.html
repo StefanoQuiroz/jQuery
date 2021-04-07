@@ -17,7 +17,15 @@
             //parents()
             // $('p, h3').click(function(){
             //     $(this).parent().append("<h3>New Guest</h3>");
-            // })
+            // });
+            $('h3, p').click(function(){
+                // $(this).siblings().hide();
+                //only p is hide()
+                // $(this).siblings('p').hide('slow');
+                // If I click on an h3 the other h3 are deleted, continue the h3 -> this and the p
+                // all h3 are hidden
+                $(this).siblings('h3').hide('slow');
+            });
         })
         
     </script>
