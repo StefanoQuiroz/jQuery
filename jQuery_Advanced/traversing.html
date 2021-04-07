@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Traversing concepts with .parent(), siblings(), .children()">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Traversing</title>
+    <script>
+        $(document).ready(function(){
+            //childrens
+            // $("#myDiv").children().css("backgroundColor", "green");
+            // $("#myDiv").children().css("color", "white");
+            // $("#myDiv").children('p').css("backgroundColor", "yellow");
+            // $("#myDiv").children('h3').css("backgroundColor", "green");
+        })
+        
+    </script>
 </head>
 <body>
-    
+    <div id="myDiv">
+        <p>here is a paragraph. It's a beautifull paragraph</p>
+        <h3>Michael Choi</h3>
+        <h3>John Supsupin</h3>
+        <h3>Trey Villafane</h3>
+        <h3>Stefano Quiroz</h3>
+    </div>        
 </body>
 </html>
