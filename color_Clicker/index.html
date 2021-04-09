@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <script type="text/javascript">
+        function random_color()
+        {
+           var rgb = ['a','b','c','d','e','f','0','1','2','3','4','5','6','7','8','9'];
+           color = '#'  //this is what we'll return!
+           for(var i = 0; i < 6; i++) 
+           {
+              x = Math.floor((Math.random()*16))
+              color += rgb[x]; 
+           }
+           return color;
+        }
+        $(document).ready(function(){
+           $('#large_box').click(function(){
+                $("#large_box").children().css("background-color",  random_color());
+                event.stopPropagation();
+           })
+           $('.side_box').click(function(event){
+               $(this).siblings().css("background-color", random_color());
+                event.stopPropagation();
+           })
+           $('.middle_box').click(function(event){
+                $(this).parent().css("background-color", random_color());
+                event.stopPropagation();
+           })
+        });
+    </script>
+    <style type="text/css">
+        *{
+           font-family: sans-serif;
+        }
+        h2, h1, h3 {
+           text-align: center;
+        }
+        #large_box {
+           margin: 0px auto;
+           margin-top: 30px;
+           background-color: lightblue;
+           width: 1200px;
+           height: 300px; 
+        }
+        #large_box div {
+           background-color: blue;
+           display: inline-block;
+           width: 350px;
+           height: 130px;
+           margin: 60px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡El ColorClicker de Codingdojo! </h1>
+      <div id='large_box'>
+          <div class='side_box'></div>
+          <div class='middle_box'></div>
+          <div class='side_box'></div>
+      </div>
+      <h2>Rules</h2>
+      <h3>1. ¡Cliquear el cuadro grande debería cambiar los colores de fondo de los cuadros pequeños y grandes!</h3>
+      <h3>2. ¡Cliquear el cuadro pequeño del medio debería cambiar el color del cuadro grande!</h3>
+      <h3>3. Cliquear el cuadro pequeño de la izquierda o la derecha debería cambiar el color de los siblings de ese cuadro</h3>    
+</body>
+</html>
